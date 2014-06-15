@@ -1,13 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
   <%= @picture.title %>
 </p>
 
 <p>
-  <b>Url:</b>
-  <%= @picture.url %>
+  <%= image_tag @picture.url, :size => "300x300" %>
 </p>
 
 
