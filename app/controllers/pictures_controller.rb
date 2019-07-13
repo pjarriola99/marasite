@@ -40,7 +40,7 @@ class PicturesController < ApplicationController
   # POST /pictures
   # POST /pictures.json
   def create
-    @picture = Picture.new(params[:picture])
+    @picture = Picture.new(picture_params)
 
     respond_to do |format|
       if @picture.save
@@ -80,4 +80,11 @@ class PicturesController < ApplicationController
       format.json { head :ok }
     end
   end
+
+  private
+
+    def picture_params
+      params.require(:picture).permit(:title, :url )
+    end
+
 end
