@@ -14,12 +14,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+            <h3><%= f.label :buttontype, "*Title of Picture" %></h3>
+                    <p class="help-block">What is this a picture of</p>
+            <%= f.text_field :title, :size => 80 %><p>
   </div>
   <div class="field">
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
+            <h3><%= f.label :buttontype, "*URL to Picture" %></h3>
+                    <p class="help-block">Copy the URL of a picture you'd like to include in this collection</p>
+            <%= f.text_field :url, :size => 80 %><p>
   </div>
   <div class="actions">
     <%= f.submit %>

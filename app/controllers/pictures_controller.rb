@@ -41,7 +41,6 @@ class PicturesController < ApplicationController
   # POST /pictures.json
   def create
     @picture = Picture.new(picture_params)
-
     respond_to do |format|
       if @picture.save
         format.html { redirect_to @picture, notice: 'Picture was successfully created.' }
@@ -53,8 +52,6 @@ class PicturesController < ApplicationController
     end
   end
 
-  # PUT /pictures/1
-  # PUT /pictures/1.json
   def update
     @picture = Picture.find(params[:id])
 
@@ -69,8 +66,6 @@ class PicturesController < ApplicationController
     end
   end
 
-  # DELETE /pictures/1
-  # DELETE /pictures/1.json
   def destroy
     @picture = Picture.find(params[:id])
     @picture.destroy
