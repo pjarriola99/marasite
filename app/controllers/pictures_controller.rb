@@ -54,10 +54,9 @@ class PicturesController < ApplicationController
 
   def update
     @picture = Picture.find(params[:id])
-
     respond_to do |format|
-      if @picture.update_attributes(params[:picture])
-        format.html { redirect_to @picture, notice: 'Picture was successfully updated.' }
+      if @picture.update_attributes(picture_params)
+        format.html { redirect_to @picture }
         format.json { head :ok }
       else
         format.html { render action: "edit" }
